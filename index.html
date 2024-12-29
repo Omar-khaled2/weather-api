@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./weather.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary p-3">
+        <div class="container-fluid">
+            <img src="./weather.png" alt="logo" class="ms-2">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mouse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active border rounded-3" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Contact</a>
+                    </li>
+
+
+                </ul>
+                <div class="form-check form-switch ms-3">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section>
+        <div class="pt-5 w-75 m-auto">
+            <form class="d-flex align-items-center" role="search">
+                <input class="form-control me-2 border rounded-4 border-black" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn btn-outline-secondary bg-black" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="back">
+        <div class="container text-center">
+            <h1 class="mb-4 text-light">Weather App</h1>
+
+            <div id="currentWeather" class="card bg-dark text-white mb-4 shadow-lg">
+                <div class="card-body">
+                    <h2 id="cityName" class="card-title">City Name</h2>
+                    <p id="date" class="card-subtitle mb-3">Date</p>
+                    <div class="display-1" id="temperature">--°C</div>
+                    <div class="weather-icon mb-3" id="weatherCondition">☀️</div>
+                    <p id="condition" class="mb-2">Condition</p>
+                    <p class="card-text">
+                        💨 <span id="windSpeed">--</span> km/h | 🌧️ <span id="humidity">--</span>%
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="row row-cols-1 row-cols-md-3 g-3" id="forecast">
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script src="./weather.js"></script>
+</body>
+
+</html>
