@@ -1,19 +1,16 @@
 const apiKey = "8c7b7e9cdfd14882a01153922242812";
 
 async function fetchWeather(city) {
-  try {
-    // Fetch current weather data
-    const response = await fetch(
-      `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3&aqi=no&alerts=no`
-    );
-    if (!response.ok) throw new Error("Failed to fetch weather data");
 
-    const data = await response.json();
-    updateCurrentWeather(data);
-    updateForecast(data.forecast.forecastday);
-  } catch (error) {
-    console.error("Error fetching weather data:", error);
-  }
+
+  const response = await fetch(
+    `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3&aqi=no&alerts=no`
+  );
+  
+  const data = await response.json();
+  updateCurrentWeather(data);
+  updateForecast(data.forecast.forecastday);
+
 }
 
 function updateCurrentWeather(data) {
